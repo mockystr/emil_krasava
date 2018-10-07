@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}{{ item.name }}{% endblock %}
+
+{% block content %}
+    <div class="text-center mt-5">
+        <p>{{ item.name }}</p>
+        <p>{{ item.description }}</p>
+    </div>
+{% endblock %}
