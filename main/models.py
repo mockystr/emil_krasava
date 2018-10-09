@@ -25,6 +25,7 @@ class Item(models.Model):
     description = models.TextField(blank=True, verbose_name="Описание")
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name="Категория")
     available = models.BooleanField(default=True, verbose_name="Доступно")
+    image_main = models.ImageField(upload_to="items/%Y/%m/%d", verbose_name="Главная фотография")
 
     class Meta:
         ordering = ('name',)
@@ -39,7 +40,7 @@ class Item(models.Model):
 
 
 class Image(models.Model):
-    img = models.ImageField(upload_to="items/%Y/%m/%d")
+    img = models.ImageField(upload_to="items/%Y/%m/%d", verbose_name="Дополнительная фотография")
     item = models.ForeignKey(Item, on_delete=models.CASCADE)
 
     class Meta:
