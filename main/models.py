@@ -4,6 +4,9 @@ from django.urls import reverse, reverse_lazy
 
 class Category(models.Model):
     name = models.CharField(max_length=200, db_index=True, verbose_name="Наименование")
+    image = models.ImageField(upload_to="category/%Y/%m", verbose_name="Фотография категории",
+                              default="../static/image/not_found.jpg")
+    description = models.TextField(default='', verbose_name="Описание")
     slug = models.SlugField(max_length=200, db_index=True, unique=True)
 
     class Meta:

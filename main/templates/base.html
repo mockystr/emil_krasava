@@ -7,30 +7,48 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--<link rel="stylesheet" type="text/css" href="header.css">-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">-->
+    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"-->
+    <!--integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">-->
 
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<header class="header">
+    <div class="header-top"></div>
+    <nav class="navbar navbar-expand-md navbar-light bg-light navbar-inverse">
         <div class="container">
-            <a class="navbar-brand" href="/">Mirror Mania</a>
+            <a class="navbar-brand" href="{% url "main:index" %}">
+                Mirror Mania
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+			    <span style="color: white;">
+			    	<i class="fa fa-bars"></i>
+			    </span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    {% for cat in categories %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ cat.get_absolute_url }}">{{ cat.name }}</a>
-                        </li>
-                    {% endfor %}
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url "main:index" %}">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url "main:category_list" %}">Продукция</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url "main:about_us" %}">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url "main:contacts" %}">Контакты</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
+<!-- /header -->
+
 
 <main class="my-5">
     {% block content %}{% endblock %}
@@ -41,9 +59,11 @@
         <div class="row row-30">
             <div class="col-md-4 col-xl-5">
                 <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light"
-                                                                             src="images/agency/logo-inverse-140x37.png"
+                        {#                                                                             src="images/agency/logo-inverse-140x37.png"#}
                                                                              alt="" width="140" height="37"
-                                                                             srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
+                        {#                                                                             srcset="images/agency/logo-retina-inverse-280x74.png 2x"#}
+                >
+                </a>
                     <p>We are an award-winning creative agency, dedicated to the best result in web design,
                         promotion, business consulting, and marketing.</p>
                     <!-- Rights-->
@@ -104,259 +124,216 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 <script>
-        $("#Fence_").hover(
-            function () {
-                $("#Fence").children().css({
-                    "opacity": "0.4",
-                    "transition": "500ms",
-                    "cursor": "pointer"
-                });
-            },
-            function () {
-                $("#Fence").children().css({
-                    "opacity": "0.05",
-                    "transition": "500ms",
-                });
-            }
-        );
-        $("#Floor_").hover(
-            function () {
-                $("#Floor").children().css({
-                    "opacity": "0.4",
-                    "transition": "500ms",
-                    "cursor": "pointer"
-                });
-            },
-            function () {
-                $("#Floor").children().css({
-                    "opacity": "0.05",
-                    "transition": "500ms",
-                });
-            }
-        );
-        $("#Facade_").hover(
-            function () {
-                $("#Facade").children().css({
-                    "opacity": "0.4",
-                    "transition": "500ms",
-                    "cursor": "pointer"
-                });
-            },
-            function () {
-                $("#Facade").children().css({
-                    "opacity": "0.05",
-                    "transition": "500ms",
-                });
-            }
-        );
-        $("#Walls_").hover(
-            function () {
-                $("#Walls").children().css({
-                    "opacity": "0.4",
-                    "transition": "500ms",
-                    "cursor": "pointer"
-                });
-            },
-            function () {
-                $("#Walls").children().css({
-                    "opacity": "0.05",
-                    "transition": "500ms",
-                });
-            }
-        );
-        $("#Roof_").hover(
-            function () {
-                $("#Roof").children().css({
-                    "opacity": "0.4",
-                    "transition": "500ms",
-                    "cursor": "pointer"
-                });
-            },
-            function () {
-                $("#Roof").children().css({
-                    "opacity": "0.05",
-                    "transition": "500ms",
-                });
-            }
-        );
-        $("#Door_").hover(
-            function () {
-                $("#Door").children().css({
-                    "opacity": "0.4",
-                    "transition": "500ms",
-                    "cursor": "pointer"
-                });
-            },
-            function () {
-                $("#Door").children().css({
-                    "opacity": "0.05",
-                    "transition": "500ms",
-                });
-            }
-        );
-        $("#Table_").hover(
-            function () {
-                $("#Table").children().css({
-                    "opacity": "0.4",
-                    "transition": "500ms",
-                    "cursor": "pointer"
-                });
-            },
-            function () {
-                $("#Table").children().css({
-                    "opacity": "0.05",
-                    "transition": "500ms",
-                });
-            }
-        );
-        $("#Sliding_doors_").hover(
-            function () {
-                $("#Sliding_doors").children().css({
-                    "opacity": "0.4",
-                    "transition": "500ms",
-                    "cursor": "pointer"
-                });
-            },
-            function () {
-                $("#Sliding_doors").children().css({
-                    "opacity": "0.05",
-                    "transition": "500ms",
-                });
-            }
-        );
-        $("#Stairs_").hover(
-            function () {
-                $("#Stairs").children().css({
-                    "opacity": "0.4",
-                    "transition": "500ms",
-                    "cursor": "pointer"
-                });
-            },
-            function () {
-                $("#Stairs").children().css({
-                    "opacity": "0.05",
-                    "transition": "500ms",
-                });
-            }
-        );
-        $("#Partition_").hover(
-            function () {
-                $("#Partition").children().css({
-                    "opacity": "0.4",
-                    "transition": "500ms",
-                    "cursor": "pointer"
-                });
-            },
-            function () {
-                $("#Partition").children().css({
-                    "opacity": "0.05",
-                    "transition": "500ms",
-                });
-            }
-        );
-        $("#Bath_").hover(
-            function () {
-                $("#Bath").children().css({
-                    "opacity": "0.4",
-                    "transition": "500ms",
-                    "cursor": "pointer"
-                });
-            },
-            function () {
-                $("#Bath").children().css({
-                    "opacity": "0.05",
-                    "transition": "500ms",
-                });
-            }
-        );
-        $("#Mirror_").hover(
-            function () {
-                $("#Mirror").children().css({
-                    "opacity": "0.4",
-                    "transition": "500ms",
-                    "cursor": "pointer"
-                });
-            },
-            function () {
-                $("#Mirror").children().css({
-                    "opacity": "0.05",
-                    "transition": "500ms",
-                });
-            }
-        );
-        $("#Shelf_").hover(
-            function () {
-                $("#Shelf").children().css({
-                    "opacity": "0.4",
-                    "transition": "500ms",
-                    "cursor": "pointer"
-                });
-            },
-            function () {
-                $("#Shelf").children().css({
-                    "opacity": "0.05",
-                    "transition": "500ms",
-                });
-            }
-        );
-        $("#Apron_").hover(
-            function () {
-                $("#Apron").children().css({
-                    "opacity": "0.4",
-                    "transition": "500ms",
-                    "cursor": "pointer"
-                });
-            },
-            function () {
-                $("#Apron").children().css({
-                    "opacity": "0.05",
-                    "transition": "500ms",
-                });
-            }
-        );
+    $("#Fence_").hover(
+        function () {
+            $("#Fence").children().css({
+                "opacity": "0.4",
+                "transition": "500ms",
+                "cursor": "pointer"
+            });
+        },
+        function () {
+            $("#Fence").children().css({
+                "opacity": "0.05",
+                "transition": "500ms",
+            });
+        }
+    );
+    $("#Floor_").hover(
+        function () {
+            $("#Floor").children().css({
+                "opacity": "0.4",
+                "transition": "500ms",
+                "cursor": "pointer"
+            });
+        },
+        function () {
+            $("#Floor").children().css({
+                "opacity": "0.05",
+                "transition": "500ms",
+            });
+        }
+    );
+    $("#Facade_").hover(
+        function () {
+            $("#Facade").children().css({
+                "opacity": "0.4",
+                "transition": "500ms",
+                "cursor": "pointer"
+            });
+        },
+        function () {
+            $("#Facade").children().css({
+                "opacity": "0.05",
+                "transition": "500ms",
+            });
+        }
+    );
+    $("#Walls_").hover(
+        function () {
+            $("#Walls").children().css({
+                "opacity": "0.4",
+                "transition": "500ms",
+                "cursor": "pointer"
+            });
+        },
+        function () {
+            $("#Walls").children().css({
+                "opacity": "0.05",
+                "transition": "500ms",
+            });
+        }
+    );
+    $("#Roof_").hover(
+        function () {
+            $("#Roof").children().css({
+                "opacity": "0.4",
+                "transition": "500ms",
+                "cursor": "pointer"
+            });
+        },
+        function () {
+            $("#Roof").children().css({
+                "opacity": "0.05",
+                "transition": "500ms",
+            });
+        }
+    );
+    $("#Door_").hover(
+        function () {
+            $("#Door").children().css({
+                "opacity": "0.4",
+                "transition": "500ms",
+                "cursor": "pointer"
+            });
+        },
+        function () {
+            $("#Door").children().css({
+                "opacity": "0.05",
+                "transition": "500ms",
+            });
+        }
+    );
+    $("#Table_").hover(
+        function () {
+            $("#Table").children().css({
+                "opacity": "0.4",
+                "transition": "500ms",
+                "cursor": "pointer"
+            });
+        },
+        function () {
+            $("#Table").children().css({
+                "opacity": "0.05",
+                "transition": "500ms",
+            });
+        }
+    );
+    $("#Sliding_doors_").hover(
+        function () {
+            $("#Sliding_doors").children().css({
+                "opacity": "0.4",
+                "transition": "500ms",
+                "cursor": "pointer"
+            });
+        },
+        function () {
+            $("#Sliding_doors").children().css({
+                "opacity": "0.05",
+                "transition": "500ms",
+            });
+        }
+    );
+    $("#Stairs_").hover(
+        function () {
+            $("#Stairs").children().css({
+                "opacity": "0.4",
+                "transition": "500ms",
+                "cursor": "pointer"
+            });
+        },
+        function () {
+            $("#Stairs").children().css({
+                "opacity": "0.05",
+                "transition": "500ms",
+            });
+        }
+    );
+    $("#Partition_").hover(
+        function () {
+            $("#Partition").children().css({
+                "opacity": "0.4",
+                "transition": "500ms",
+                "cursor": "pointer"
+            });
+        },
+        function () {
+            $("#Partition").children().css({
+                "opacity": "0.05",
+                "transition": "500ms",
+            });
+        }
+    );
+    $("#Bath_").hover(
+        function () {
+            $("#Bath").children().css({
+                "opacity": "0.4",
+                "transition": "500ms",
+                "cursor": "pointer"
+            });
+        },
+        function () {
+            $("#Bath").children().css({
+                "opacity": "0.05",
+                "transition": "500ms",
+            });
+        }
+    );
+    $("#Mirror_").hover(
+        function () {
+            $("#Mirror").children().css({
+                "opacity": "0.4",
+                "transition": "500ms",
+                "cursor": "pointer"
+            });
+        },
+        function () {
+            $("#Mirror").children().css({
+                "opacity": "0.05",
+                "transition": "500ms",
+            });
+        }
+    );
+    $("#Shelf_").hover(
+        function () {
+            $("#Shelf").children().css({
+                "opacity": "0.4",
+                "transition": "500ms",
+                "cursor": "pointer"
+            });
+        },
+        function () {
+            $("#Shelf").children().css({
+                "opacity": "0.05",
+                "transition": "500ms",
+            });
+        }
+    );
+    $("#Apron_").hover(
+        function () {
+            $("#Apron").children().css({
+                "opacity": "0.4",
+                "transition": "500ms",
+                "cursor": "pointer"
+            });
+        },
+        function () {
+            $("#Apron").children().css({
+                "opacity": "0.05",
+                "transition": "500ms",
+            });
+        }
+    );
 </script>
 </body>
 </html>
-{#<div class="container">#}
-{#    <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-light bg-light d-flex flex-column">#}
-{#        <div class="row col-12 justify-content-between">#}
-{#            <div class="col-4">#}
-{#                <a class="navbar-brand" href="#">Furniture4Rent</a>#}
-{#            </div>#}
-{#            <div class="col-8 d-flex justify-content-end  align-items-center">#}
-{#                <form>#}
-{#                    <div class="input-group">#}
-{#                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">#}
-{#                        <button class="btn btn-outline-secondary" type="submit">Go</button>#}
-{#                        <div class="d-flex align-items-center"><h5#}
-{#                                class="d-sm-none d-lg-block font-weight-normal p-0 m-0 mx-2">01234 567890</h5></div>#}
-{#                    </div>#}
-{#                </form>#}
-{#                <a href="#" class="mx-2">Cart</a>#}
-{#                <button class="navbar-toggler" type="button" data-toggle="collapse"#}
-{#                        data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"#}
-{#                        aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>#}
-{#                </button>#}
-{#            </div>#}
-{#        </div>#}
-{##}
-{#        <div class="row col-12 justify-content-end">#}
-{#            <div class="collapse navbar-collapse" id="navbarSupportedContent1">#}
-{#                <ul class="navbar-nav ml-auto">#}
-{#                    <li class="nav-item active"><a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>#}
-{#                    </li>#}
-{#                    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>#}
-{#                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1"#}
-{#                                                     role="button" data-toggle="dropdown" aria-haspopup="true"#}
-{#                                                     aria-expanded="false"> Dropdown </a>#}
-{#                        <div class="dropdown-menu" aria-labelledby="navbarDropdown1"><a class="dropdown-item" href="#">Action</a>#}
-{#                            <a class="dropdown-item" href="#">Another action</a>#}
-{#                            <div class="dropdown-divider"></div>#}
-{#                            <a class="dropdown-item" href="#">Something else here</a></div>#}
-{#                    </li>#}
-{#                    <li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>#}
-{#                </ul>#}
-{#            </div>#}
-{#        </div>#}
-{#    </nav>#}
-{#</div>#}
