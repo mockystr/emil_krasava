@@ -1,0 +1,25 @@
+.elements_of_house{
+    padding: 30px;
+    padding-top: 80px;
+}
+.element_of_house {
+    background: #17479e;
+    width: 115px;
+    height: 50px;
+    margin: 3px;
+    margin-right: 8px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5%;
+    color: #FFFFFF;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+    transition: 500ms;
+    float: left;
+    font-size: 14px;
+}
+.element_of_house:hover {
+    transform: translate(6px);
+    transition: 500ms;
+}

@@ -4,9 +4,33 @@
 {% block title %}Mirror Mania{% endblock %}
 
 {% block content %}
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-3 elements_of_house">
+                 <div class="element_of_house door" id="Fence_">Ограждения</div>
+                 <div class="element_of_house" id="Floor_">Полы</div>
+                 <div class="element_of_house" id="Facade_">Облицовки</div>
+                 <div class="element_of_house" id="Walls_">Порталы</div>
+                 <div class="element_of_house" id="Roof_">Козырьки</div>
+                 <div class="element_of_house" id="Door_">Двери</div>
+                 <div class="element_of_house" id="Table_">Столы</div>
+                 <div class="element_of_house" id="Sliding_doors_" style="padding:4.5%; line-height:1;">Раздвижные двери</div>
+                 <div class="element_of_house" id="Stairs_">Лестницы</div>
+                 <div class="element_of_house" id="Partition_">Перегородки</div>
+                 <div class="element_of_house" id="Bath_">Душевые</div>
+                 <div class="element_of_house" id="Mirror_">Зеркала</div>
+                 <div class="element_of_house" id="Shelf_">Полки</div>
+                 <div class="element_of_house" id="Apron_">Фартуки</div>
+             </div>
+             <div class="col-lg-9">
+                {% include "main/house.svg"%}
+             </div>
+        </div>
+    </div>
+
     <div class="container bg-light border" style="height: 900px;">
         <p class="text-center">
-            {% include 'main/house.svg' %}
+
         </p>
     </div>
 {% endblock %}
