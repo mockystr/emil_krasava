@@ -56,21 +56,45 @@ header, .navbar {
     transform: translate(10px);
     transition: 250ms;
 }
+
 .house_header {
     padding: 50px;
 }
-.house_bg{
+
+.house_bg {
     background: #f8f9fa;
 }
+
 .callback_btn {
-    background: #17479e;
-    color: white;
+    /*border: 4px pink;*/
+    border-color: #17479e;
+    /*color: white;*/
 }
+
 .callback_btn:hover {
     background: #1951BB;
     color: #f8f9fa;
 }
+
 .icon {
     width: 16px;
     margin-bottom: 3%;
+}
+
+.card {
+    width: 100%;
+}
+.card > img {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 576px) {
+    .card {
+        width: 90%;
+        margin: 10px auto;
+    }
 }
