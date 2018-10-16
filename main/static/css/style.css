@@ -11,6 +11,8 @@ header, .navbar {
 .header-top {
     background: #17479e;
     height: 40px;
+    color: white;
+    padding: 0.5%;
 }
 
 .navbar-toggler {
@@ -23,29 +25,53 @@ header, .navbar {
 }
 
 .elements_of_house {
-    padding: 30px;
-    padding-top: 80px;
+    padding: 20px;
+    padding-top: 60px;
 }
 
 .element_of_house {
-    background: #17479e;
-    width: 115px;
+    /*background: #17479e;
+    box-shadow: 2px 2px 5px black;
+    color: #FFFFFF;
+    padding: 5%;*/
+    color: #17479e;
+    text-shadow: 1px 1px 2px #bccaff;
+
+    width: 150px;
     height: 50px;
     margin: 3px;
     margin-right: 8px;
     border-radius: 10px;
-    text-align: center;
-    padding: 5%;
-    color: #FFFFFF;
+    text-align: left;
     user-select: none;
     -webkit-user-select: none;
     cursor: pointer;
-    transition: 500ms;
+    transition: 250ms;
     float: left;
-    font-size: 14px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
 }
 
 .element_of_house:hover {
-    transform: translate(6px);
-    transition: 500ms;
+    transform: translate(10px);
+    transition: 250ms;
+}
+.house_header {
+    padding: 50px;
+}
+.house_bg{
+    background: #f8f9fa;
+}
+.callback_btn {
+    background: #17479e;
+    color: white;
+}
+.callback_btn:hover {
+    background: #1951BB;
+    color: #f8f9fa;
+}
+.icon {
+    width: 16px;
+    margin-bottom: 3%;
 }
