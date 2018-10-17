@@ -11,6 +11,10 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
+    <link rel="stylesheet" type="text/css" href="{% static 'slick/slick.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'slick/slick-theme.css' %}"/>
+
+
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
@@ -60,7 +64,7 @@
     {% block content %}{% endblock %}
 </main>
 
-<footer class="section footer-classic context-dark bg-light" style="background: #2d3246;">
+<footer class="footer_bg section footer-classic context-dark bg-light" style="background: #2d3246;">
     <div class="container">
         <div class="row row-30">
             <div class="col-md-4 col-xl-5">
@@ -106,6 +110,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+<script type="text/javascript" src="{% static 'slick\slick.min.js' %}"></script>
 <script>
     $("#Fence_").hover(
         function () {
@@ -317,6 +322,18 @@
             });
         }
     );
+
+</script>
+<script>
+        $(document).ready(function(){
+          $('.imgs_of_item').slick({
+              arrows: true,
+              dots: true,
+              infinite: false,
+              slidesToShow: 3,
+              slidesToScroll: 3
+          });
+        });
 </script>
 </body>
 </html>

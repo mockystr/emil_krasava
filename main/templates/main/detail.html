@@ -3,15 +3,68 @@
 {% block title %}{{ item.name }}{% endblock %}
 
 {% block content %}
-    <div class="text-center mt-5">
-        <p>{{ item.name }}</p>
-        <p>{{ item.description }}</p>
-        <p>Цена товара: {{ item.price }}</p>
-        <img src="{{ item.image_main.url }}" alt="image of item">
+    <div class="container my-5">
+        <h2>{{ item.name }}</h2>
+        <div class="row my-2">
+            <div class="col-6">
+                <img src="{{ item.image_main.url }}" alt="image of item" style="width: 100%">
+            </div>
+            <div class="col-6">
+                <p>{{ item.description }}</p>
+            </div>
+        </div>
+        <h5 class="offset-6">Цена товара: {{ item.price }}</h5>
     </div>
-    <div class="mt-5">
-        {% for image in other_images %}
-            <img src="{{ image.img.url }}" alt="asd">
-        {% endfor %}
+    <div class="mt-5" style="background: #f8f9fa; box-shadow: 0 0 5px black">
+        <div class="container">
+            <button type="button" class="slick-prev">Previous</button>
+                <div class="imgs_of_item">
+                    {% for image in other_images %}
+                        <div style="padding: 10px">
+                            <a href="{{ image.img.url }}" target="_blank">
+                                <img src="{{ image.img.url }}" style="width: 100%" alt="asd">
+                            </a>
+                        </div>
+                    {% endfor %}
+                    <!-- Example -->
+                    <div style="padding: 10px">
+                        <a href="https://via.placeholder.com/300x300" target="_blank">
+                            <img src="https://via.placeholder.com/300x300" style="width: 100%">
+                        </a>
+                    </div>
+                    <div style="padding: 10px">
+                        <a href="https://via.placeholder.com/300x300" target="_blank">
+                            <img src="https://via.placeholder.com/300x300" style="width: 100%">
+                        </a>
+                    </div>
+                    <div style="padding: 10px">
+                        <a href="https://via.placeholder.com/300x300" target="_blank">
+                            <img src="https://via.placeholder.com/300x300" style="width: 100%">
+                        </a>
+                    </div>
+                    <div style="padding: 10px">
+                        <a href="https://via.placeholder.com/300x300" target="_blank">
+                            <img src="https://via.placeholder.com/300x300" style="width: 100%">
+                        </a>
+                    </div>
+                </div>
+            <button type="button" class="slick-prev">Next</button>
+        </div>
+    </div>
+    <div style="">
+        <div class="house_header container col-lg-5 text-center">
+            <h2>
+                Заинтересовались?
+            </h2>
+            <p>
+                Свяжитесь с нами. Наш специалист будет рад вам помочь😉
+            </p>
+            <p>
+            <h5><a href="#" class="btn btn-link" style="padding: 0">+7(911)111-11-11</a> | <a href="#"
+                                                                                              class="btn btn-link"
+                                                                                              style="padding: 0">Написать</a>
+            </h5>
+            </p>
+        </div>
     </div>
 {% endblock %}
