@@ -8,15 +8,15 @@
     <div class="container">
         <div class="row justify-content-between my-5">
             {% for category in categories %}
-                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                    <div class="card category my-2">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 my-2">
+                    <div class="card category my-2 items_card">
                         <div class="card-img-top" style="height: 200px; overflow: hidden;">
-                            <img class="card-img-top" src="{{ category.image.url }}" alt="Card image cap">
+                            <img style="height: 100%" class="card-img-top" src="{{ category.image.url }}" alt="Card image cap">
                         </div>
-                        <div class="card-body">
+                        <div class="card-body items_body">
                             <h5 class="card-title">{{ category.name }}</h5>
                             <p class="card-text category-description" >{{ category.description }}</p>
-                            <a href="{{ category.get_absolute_url }}" class="btn btn-primary" >Посмотреть подробнее</a>
+                            <a href="{{ category.get_absolute_url }}" class="btn btn-link" >Подробнее</a>
                         </div>
                     </div>
                 </div>
