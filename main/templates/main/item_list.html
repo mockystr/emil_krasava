@@ -10,13 +10,13 @@
         <p>"Здесь должно быть описание котегории"{{ category.description }}</p>
         <div class="row justify-content-between my-5">
             {% for item in items %}
-                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                    <div class="card my-2">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 ">
+                    <div class="card my-2 items_card">
                         <img class="card-img-top" src="{{ item.image_main.url }}" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">{{ item.name }}</h5>
                             <p class="card-text" style="white-space: nowrap; overflow:hidden; text-overflow: ellipsis;">{{ item.description }}</p>
-                            <a href="{{ item.get_absolute_url }}" class="btn btn-primary">Посмотреть подробнее</a>
+                            <a href="{{ item.get_absolute_url }}" class="btn btn-link">Подробнее</a>
                         </div>
                     </div>
                 </div>
