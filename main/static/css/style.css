@@ -146,14 +146,13 @@ p.category-description {
 }
 
 .items_card {
-    box-shadow: 3px 3px 5px black;
     transition: 500ms;
     border: 0;
 }
 
 .items_card:hover {
     transition: 500ms;
-    box-shadow: -3px 3px 5px black;
+    box-shadow: 3px 3px 5px black;
 }
 
 @media screen and (max-width: 768px) {
