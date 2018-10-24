@@ -14,13 +14,20 @@
                 </div>
             </div>
             <div class="col-lg-5 product_detail_info">
-                <h2 class="item_name">{{ item.name }}</h2>
+                <h1 class="item_name">{{ item.name }}</h1>
+                <p class="item_category text-muted">{{ item.category }}</p>
                 <h2 class="item_price">{{ item.price }}</h2>
 
+                <div class="order-button_block">
+                    <button type="submit" class="order_button">Заказать</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
                 <div class="item_description">
                     <p class="text-muted">{{ item.description }}</p>
                 </div>
-                <button type="submit" class="order_button">Заказать</button>
             </div>
         </div>
     </div>

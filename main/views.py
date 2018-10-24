@@ -22,7 +22,7 @@ class CategoryProductsListView(TemplateResponseMixin, View):
     def get(self, request, category_slug):
         category = get_object_or_404(Category, slug=category_slug)
         items_of_category = Item.objects.filter(category=category)
-        return self.render_to_response({'items': items_of_category})
+        return self.render_to_response({'category': category, 'items': items_of_category})
 
 
 class ProductDetailView(TemplateResponseMixin, View):
