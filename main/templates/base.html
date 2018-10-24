@@ -64,43 +64,89 @@
 <main>
     {% block content %}{% endblock %}
 </main>
-
-<footer class="footer_bg section footer-classic context-dark bg-light" style="background: #2d3246;">
+<footer class="pt-4 footer_init">
     <div class="container">
-        <div class="row row-30">
-            <div class="col-md-4 col-xl-5">
-                <div class="pr-xl-4 my-5">
-                    <img src="https://via.placeholder.com/150x50" alt="Логотип">
-                    <p>Здесь должен быть небольшой текст о том, когда и для чего была создана компания.</p>
-                    <!-- Rights-->
-                    <p class="rights"><span>©  </span><span
-                            class="copyright-year">2018</span><span> </span><span>Mirror Mania</span><span>. </span>
-                    </p>
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+            <!-- Grid row -->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <!-- Content -->
+                    <h5 class="text-uppercase">Footer Content</h5>
+                    <p>Here you can use rows and columns here to organize your footer content.</p>
                 </div>
-            </div>
-            <div class="col-lg-7 my-5">
-                <div class="container">
-                    <h5>Контакты</h5>
-                    <div class="row">
-                        <dl class="col-lg-4">
-                            <dt>Адрес:</dt>
-                            <dd>111222, Москва, Пушкина, 1</dd>
-                        </dl>
-                        <dl class="col-lg-4">
-                            <dt>email:</dt>
-                            <dd><a href="mailto:#">dkstudioin@gmail.com</a></dd>
-                        </dl>
-                        <dl class="col-lg-4">
-                            <dt>Телефон:</dt>
-                            <dd><a href="tel:#">+91 7568543012</a>
-                            </dd>
-                        </dl>
-                    </div>
+                <!-- Grid column -->
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3 col-sm-6">
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Links</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Link 1</a>
+                        </li>
+                    </ul>
                 </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3 col-sm-6">
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Links</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Link 1</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Grid column -->
             </div>
+            <!-- Grid row -->
         </div>
+        <!-- Footer Links -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
     </div>
 </footer>
+{#<footer class="footer_bg section footer-classic context-dark bg-light" style="background: #2d3246;">#}
+{#    <div class="container">#}
+{#        <div class="row row-30">#}
+{#            <div class="col-md-4 col-xl-5">#}
+{#                <div class="pr-xl-4 my-5">#}
+{#                    <img src="https://via.placeholder.com/150x50" alt="Логотип">#}
+{#                    <p>Здесь должен быть небольшой текст о том, когда и для чего была создана компания.</p>#}
+{#                    <!-- Rights-->#}
+{#                    <p class="rights"><span>©  </span><span#}
+{#                            class="copyright-year">2018</span><span> </span><span>Mirror Mania</span><span>. </span>#}
+{#                    </p>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="col-lg-7 my-5">#}
+{#                <div class="container">#}
+{#                    <h5>Контакты</h5>#}
+{#                    <div class="row">#}
+{#                        <dl class="col-lg-4">#}
+{#                            <dt>Адрес:</dt>#}
+{#                            <dd>111222, Москва, Пушкина, 1</dd>#}
+{#                        </dl>#}
+{#                        <dl class="col-lg-4">#}
+{#                            <dt>email:</dt>#}
+{#                            <dd><a href="mailto:#">dkstudioin@gmail.com</a></dd>#}
+{#                        </dl>#}
+{#                        <dl class="col-lg-4">#}
+{#                            <dt>Телефон:</dt>#}
+{#                            <dd><a href="tel:#">+91 7568543012</a>#}
+{#                            </dd>#}
+{#                        </dl>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</footer>#}
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -116,6 +162,10 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 <script type="text/javascript" src="{% static 'slick\slick.min.js' %}"></script>
+<script>
+    if ($(document).height() <= $(window).height())
+        $("footer").addClass("fixing_footer");
+</script>
 <script>
     $("#Fence_").hover(
         function () {
