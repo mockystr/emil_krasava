@@ -2,6 +2,11 @@
 {% load static %}
 {% block title %}{{ item.name }}{% endblock %}
 
+{% block other_styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'slick/slick.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'slick/slick-theme.css' %}"/>
+{% endblock %}
+
 {% block content %}
     <div class="container my-5">
         <div class="row">
@@ -31,4 +36,20 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{% static 'slick\slick.min.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(() => {
+            $('.detail-view-slider').slick({
+                arrows: false,
+                dots: true,
+                adaptiveHeight: true,
+                speed: 250,
+                fade: true,
+                cssEase: 'linear'
+            });
+        });
+    </script>
 {% endblock %}

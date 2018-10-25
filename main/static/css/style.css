@@ -13,9 +13,9 @@ header, .navbar {
 }
 
 header {
-    -webkit-box-shadow: 0 0 5px black;
-    -moz-box-shadow: 0 0 5px black;
-    box-shadow: 0 0 5px black;
+    /*-webkit-box-shadow: 0 0 5px black;*/
+    /*-moz-box-shadow: 0 0 5px black;*/
+    /*box-shadow: 0 0 5px black;*/
 }
 
 .map {
@@ -31,7 +31,7 @@ header {
     background: #17479e;
     height: 40px;
     color: white;
-    padding: 0.5%;
+    padding: 8px;
 }
 
 .navbar-toggler {
@@ -146,6 +146,7 @@ p.category-description {
 }
 
 .category_name_main {
+    color: #609ab6;
     text-align: center;
     text-transform: uppercase;
     font-weight: lighter;
@@ -163,23 +164,12 @@ p.category-description {
 }
 
 .card-img-top {
-    height: 250px;
+    /*height: 350px;*/
     width: auto;
 }
 
 .list_block {
     justify-content: center;
-}
-
-@media screen and (max-width: 768px) {
-
-}
-
-@media screen and (max-width: 576px) {
-    .card {
-        width: 90%;
-        margin: 10px auto;
-    }
 }
 
 .product_detail_info {
@@ -237,6 +227,10 @@ p.category-description {
 }
 
 .footer_init {
+    padding: 0;
+    margin: 0;
+    background-color: #17479e;
+    color: #e5efff;
     border-top: 0.0625rem solid #e3dddd;
 }
 
@@ -244,6 +238,34 @@ p.category-description {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.footer_ul {
+    justify-content: space-around;
+    padding: 0;
+    margin-top: -4px;
+}
+
+.footer_ul li {
+    padding: 0;
+    list-style: none;
+}
+
+.footer_contacts {
+    text-align: right;
+}
+
+@media screen and (max-width: 576px) {
+    .card {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer_copyrights {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -263,4 +285,11 @@ p.category-description {
         text-align: center;
         border: none;
     }
+
+    .footer_contacts ul {
+        display: flex;
+        justify-content: space-around;
+        text-align: left;
+    }
 }
+

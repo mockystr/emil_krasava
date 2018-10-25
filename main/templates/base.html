@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
           integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="{% static 'slick/slick.css' %}"/>
-    <link rel="stylesheet" type="text/css" href="{% static 'slick/slick-theme.css' %}"/>
+{#    <link rel="stylesheet" type="text/css" href="{% static 'slick/slick.css' %}"/>#}
+{#    <link rel="stylesheet" type="text/css" href="{% static 'slick/slick-theme.css' %}"/>#}
 
     <title>{% block title %}{% endblock %}</title>
+    {% block other_styles %}{% endblock %}
 </head>
 <body>
 <header class="header border-bottom">
@@ -64,89 +65,48 @@
 <main>
     {% block content %}{% endblock %}
 </main>
-<footer class="pt-4 footer_init">
+
+<footer class="pt-4 footer_init pb-2">
     <div class="container">
-        <!-- Footer Links -->
-        <div class="container-fluid text-center text-md-left">
-            <!-- Grid row -->
-            <div class="row">
-                <!-- Grid column -->
-                <div class="col-md-6 mt-md-0 mt-3">
-                    <!-- Content -->
-                    <h5 class="text-uppercase">Footer Content</h5>
-                    <p>Here you can use rows and columns here to organize your footer content.</p>
-                </div>
-                <!-- Grid column -->
-                <hr class="clearfix w-100 d-md-none pb-3">
-                <!-- Grid column -->
-                <div class="col-md-3 mb-md-0 mb-3 col-sm-6">
-                    <!-- Links -->
-                    <h5 class="text-uppercase">Links</h5>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!">Link 1</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Grid column -->
-                <!-- Grid column -->
-                <div class="col-md-3 mb-md-0 mb-3 col-sm-6">
-                    <!-- Links -->
-                    <h5 class="text-uppercase">Links</h5>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!">Link 1</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Grid column -->
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus atque deleniti est explicabo id
+                    ipsa iure labore laboriosam magni minima modi molestias natus odit, porro praesentium, quaerat
+                </p>
             </div>
-            <!-- Grid row -->
+            <div class="col-lg-4 col-md-12 footer_contacts">
+                <ul class="" style="list-style: none;">
+                    <li>+7(999)-999-99-99.</li>
+                    <li>aasdasdasd@mail.ru</li>
+                </ul>
+            </div>
         </div>
-        <!-- Footer Links -->
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2018 Copyright:
-            <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 order-md-0 order-1 footer_copyrights">
+                <div class="footer-copyright">© 2018 Copyright: MDBootstrap.com</div>
+            </div>
+            <div class="col-lg-6 col-md-6 order-md-1 order-0">
+                <div class="footer_links">
+                    <ul class="d-flex footer_ul">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <!-- Copyright -->
     </div>
 </footer>
-{#<footer class="footer_bg section footer-classic context-dark bg-light" style="background: #2d3246;">#}
-{#    <div class="container">#}
-{#        <div class="row row-30">#}
-{#            <div class="col-md-4 col-xl-5">#}
-{#                <div class="pr-xl-4 my-5">#}
-{#                    <img src="https://via.placeholder.com/150x50" alt="Логотип">#}
-{#                    <p>Здесь должен быть небольшой текст о том, когда и для чего была создана компания.</p>#}
-{#                    <!-- Rights-->#}
-{#                    <p class="rights"><span>©  </span><span#}
-{#                            class="copyright-year">2018</span><span> </span><span>Mirror Mania</span><span>. </span>#}
-{#                    </p>#}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="col-lg-7 my-5">#}
-{#                <div class="container">#}
-{#                    <h5>Контакты</h5>#}
-{#                    <div class="row">#}
-{#                        <dl class="col-lg-4">#}
-{#                            <dt>Адрес:</dt>#}
-{#                            <dd>111222, Москва, Пушкина, 1</dd>#}
-{#                        </dl>#}
-{#                        <dl class="col-lg-4">#}
-{#                            <dt>email:</dt>#}
-{#                            <dd><a href="mailto:#">dkstudioin@gmail.com</a></dd>#}
-{#                        </dl>#}
-{#                        <dl class="col-lg-4">#}
-{#                            <dt>Телефон:</dt>#}
-{#                            <dd><a href="tel:#">+91 7568543012</a>#}
-{#                            </dd>#}
-{#                        </dl>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-{#</footer>#}
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -158,258 +118,39 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+{#<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>#}
+{#<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>#}
+{% block scripts %}{% endblock %}
+<script>
+    footer = $('footer');
 
-<script type="text/javascript" src="{% static 'slick\slick.min.js' %}"></script>
-<script>
-    if ($(document).height() <= $(window).height())
-        $("footer").addClass("fixing_footer");
-</script>
-<script>
-    $("#Fence_").hover(
-        function () {
-            $("#Fence").children().css({
-                "opacity": "0.4",
-                "transition": "500ms",
-                "cursor": "pointer"
-            });
-        },
-        function () {
-            $("#Fence").children().css({
-                "opacity": "0.05",
-                "transition": "500ms",
-            });
-        }
-    );
-    $("#Floor_").hover(
-        function () {
-            $("#Floor").children().css({
-                "opacity": "0.4",
-                "transition": "500ms",
-                "cursor": "pointer"
-            });
-        },
-        function () {
-            $("#Floor").children().css({
-                "opacity": "0.05",
-                "transition": "500ms",
-            });
-        }
-    );
-    $("#Facade_").hover(
-        function () {
-            $("#Facade").children().css({
-                "opacity": "0.4",
-                "transition": "500ms",
-                "cursor": "pointer"
-            });
-        },
-        function () {
-            $("#Facade").children().css({
-                "opacity": "0.05",
-                "transition": "500ms",
-            });
-        }
-    );
-    $("#Walls_").hover(
-        function () {
-            $("#Walls").children().css({
-                "opacity": "0.4",
-                "transition": "500ms",
-                "cursor": "pointer"
-            });
-        },
-        function () {
-            $("#Walls").children().css({
-                "opacity": "0.05",
-                "transition": "500ms",
-            });
-        }
-    );
-    $("#Roof_").hover(
-        function () {
-            $("#Roof").children().css({
-                "opacity": "0.4",
-                "transition": "500ms",
-                "cursor": "pointer"
-            });
-        },
-        function () {
-            $("#Roof").children().css({
-                "opacity": "0.05",
-                "transition": "500ms",
-            });
-        }
-    );
-    $("#Door_").hover(
-        function () {
-            $("#Door").children().css({
-                "opacity": "0.4",
-                "transition": "500ms",
-                "cursor": "pointer"
-            });
-        },
-        function () {
-            $("#Door").children().css({
-                "opacity": "0.05",
-                "transition": "500ms",
-            });
-        }
-    );
-    $("#Table_").hover(
-        function () {
-            $("#Table").children().css({
-                "opacity": "0.4",
-                "transition": "500ms",
-                "cursor": "pointer"
-            });
-        },
-        function () {
-            $("#Table").children().css({
-                "opacity": "0.05",
-                "transition": "500ms",
-            });
-        }
-    );
-    $("#Sliding_doors_").hover(
-        function () {
-            $("#Sliding_doors").children().css({
-                "opacity": "0.4",
-                "transition": "500ms",
-                "cursor": "pointer"
-            });
-        },
-        function () {
-            $("#Sliding_doors").children().css({
-                "opacity": "0.05",
-                "transition": "500ms",
-            });
-        }
-    );
-    $("#Stairs_").hover(
-        function () {
-            $("#Stairs").children().css({
-                "opacity": "0.4",
-                "transition": "500ms",
-                "cursor": "pointer"
-            });
-        },
-        function () {
-            $("#Stairs").children().css({
-                "opacity": "0.05",
-                "transition": "500ms",
-            });
-        }
-    );
-    $("#Partition_").hover(
-        function () {
-            $("#Partition").children().css({
-                "opacity": "0.4",
-                "transition": "500ms",
-                "cursor": "pointer"
-            });
-        },
-        function () {
-            $("#Partition").children().css({
-                "opacity": "0.05",
-                "transition": "500ms",
-            });
-        }
-    );
-    $("#Bath_").hover(
-        function () {
-            $("#Bath").children().css({
-                "opacity": "0.4",
-                "transition": "500ms",
-                "cursor": "pointer"
-            });
-        },
-        function () {
-            $("#Bath").children().css({
-                "opacity": "0.05",
-                "transition": "500ms",
-            });
-        }
-    );
-    $("#Mirror_").hover(
-        function () {
-            $("#Mirror").children().css({
-                "opacity": "0.4",
-                "transition": "500ms",
-                "cursor": "pointer"
-            });
-        },
-        function () {
-            $("#Mirror").children().css({
-                "opacity": "0.05",
-                "transition": "500ms",
-            });
-        }
-    );
-    $("#Shelf_").hover(
-        function () {
-            $("#Shelf").children().css({
-                "opacity": "0.4",
-                "transition": "500ms",
-                "cursor": "pointer"
-            });
-        },
-        function () {
-            $("#Shelf").children().css({
-                "opacity": "0.05",
-                "transition": "500ms",
-            });
-        }
-    );
-    $("#Apron_").hover(
-        function () {
-            $("#Apron").children().css({
-                "opacity": "0.4",
-                "transition": "500ms",
-                "cursor": "pointer"
-            });
-        },
-        function () {
-            $("#Apron").children().css({
-                "opacity": "0.05",
-                "transition": "500ms",
-            });
-        }
-    );
+    {#if ($(document).height() <= $(window).height())#}
+    {#    $("footer").addClass("fixing_footer");#}
 
+    if ($(document).height() <= $(window).height() - footer.height()) {
+        footer.addClass("fixing_footer");
+    }
 </script>
-<script>
-    $(document).ready(function () {
-        $('.imgs_of_item').slick({
-            arrows: true,
-            dots: true,
-            infinite: false,
-            slidesToShow: 3,
-            slidesToScroll: 3
-        });
-    });
-</script>
+
+{#<script>#}
+{#    $(document).ready(function () {#}
+{#        $('.imgs_of_item').slick({#}
+{#            arrows: true,#}
+{#            dots: true,#}
+{#            infinite: false,#}
+{#            slidesToShow: 3,#}
+{#            slidesToScroll: 3#}
+{#        });#}
+{#    });#}
+{#</script>#}
 <script type="text/javascript">
-    var page = window.location["pathname"];
-    if (page == '/') {
+    let page = window.location["pathname"];
+    if (page === '/') {
         document.getElementById('main').className += " active";
     }
     else {
         document.getElementById(page.slice(1)).className += " active";
     }
-</script>
-<script type="text/javascript">
-    $(document).ready(() => {
-        $('.detail-view-slider').slick({
-            arrows: false,
-            dots: true,
-            adaptiveHeight: true,
-            speed: 250,
-            fade: true,
-            cssEase: 'linear'
-        });
-    });
 </script>
 </body>
 </html>
