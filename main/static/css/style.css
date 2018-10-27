@@ -1,3 +1,6 @@
+/*default a color*/
+/*#007bff*/
+
 body {
     margin: 0;
     padding: 0;
@@ -146,7 +149,7 @@ p.category-description {
 }
 
 .category_name_main {
-    color: #609ab6;
+    color: #17479e;
     text-align: center;
     text-transform: uppercase;
     font-weight: lighter;
@@ -220,7 +223,7 @@ p.category-description {
 }
 
 .order_button:hover {
-    background-color: #0046ff;
+    background-color: #1749b9;
     transition: 150ms;
 }
 
@@ -254,6 +257,10 @@ p.category-description {
     justify-content: space-around;
     padding: 0;
     margin-top: -4px;
+}
+
+.footer_contacts > ul {
+    padding: 0;
 }
 
 .footer_ul li {
