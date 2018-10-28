@@ -52,3 +52,22 @@ class Image(models.Model):
 
     def __str__(self):
         return "Фотография для {}".format(self.item.name)
+
+
+class Catalog(models.Model):
+    name = models.CharField(max_length=200, db_index=True, verbose_name="Наименование")
+    slug = models.SlugField(max_length=200, db_index=True, unique=True)
+    file = models.FileField(upload_to='catalogs/%Y/%m', verbose_name='Файл')
+    image = models.ImageField(upload_to="category/%Y/%m", verbose_name="Фотография категории",
+                              default="../static/image/not_found.jpg")
+
+    class Meta:
+        ordering = ('name',)
+        verbose_name = "Каталог"
+        verbose_name_plural = "Каталоги"
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse("main:catalog_list", args=[self.slug])

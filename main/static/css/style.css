@@ -167,8 +167,8 @@ p.category-description {
 }
 
 .card-img-top {
-    /*height: 350px;*/
-    width: auto;
+    height: 280px;
+    width: 100%;
 }
 
 a {
@@ -200,19 +200,18 @@ a.active {
     color: #17479e !important;
 }
 
-.list_block {
-    justify-content: center;
-}
-
 .product_detail_info {
     font-family: 'Pontano Sans', sans-serif;
     font-size: 1.125rem;
 }
 
+.image_of_slider {
+    text-align: center;
+}
+
 .image_of_slider img {
-    width: 700px;
-    height: auto;
-    /*max-height: 500px;*/
+    height: 600px;
+    width: 100%;
 }
 
 .item_name {
@@ -268,6 +267,14 @@ a.active {
     margin: 25px 0;
     padding: 2rem 0 0 0;
     font-size: 1rem;
+}
+
+.catalog_image {
+
+}
+
+.catalog_image img {
+
 }
 
 .footer_init {

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Category, Item, Image
+from .models import Category, Item, Image, Catalog
 from django.shortcuts import redirect, get_object_or_404
 from django.views.generic.base import TemplateResponseMixin, View
 from django.urls import reverse_lazy
@@ -59,3 +59,11 @@ class ContactsView(TemplateResponseMixin, View):
 
     def get(self, request):
         return self.render_to_response({})
+
+
+class CatalogListView(TemplateResponseMixin, View):
+    template_name = 'main/catalogs.html'
+
+    def get(self, request):
+        catalogs = Catalog.objects.all()
+        return self.render_to_response({'catalogs': catalogs})
