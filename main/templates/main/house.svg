@@ -3,7 +3,7 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 666 465" style="enable-background:new 0 0 666 465;" xml:space="preserve">
 <style type="text/css">
-	.elem{opacity:0.05;fill:#0000FF;transition:500ms}
+	.elem{opacity:0.05;fill:#FC0107;transition:500ms}
 	#Facade:hover > *{
 		opacity: 0.4;
 		transition: 500ms;
