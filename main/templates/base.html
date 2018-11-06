@@ -127,28 +127,29 @@
 {% block scripts %}{% endblock %}
 <script>
     let footer = $('footer');
+    /*
     if ($(document).height() <= $(window).height()) {
         footer.addClass("fixed-bottom");
     }
+    */
 
-    /*
     let lastWidth = $(window).width();
 
-        function checkFooter() {
-            if ($(document).height() <= $(window).height()) {
-                footer.addClass("fixed-bottom");
-            }
+    function checkFooter() {
+        if ($(document).height() <= $(window).height()) {
+            footer.addClass("fixed-bottom");
         }
+    }
 
-        (checkFooter());
+    (checkFooter());
 
-        $(window).resize(function () {
-            if ($(window).width() !== lastWidth) {
-                checkFooter();
-                lastWidth = $(window).width();
-            }
-        })
-    */
+    $(window).resize(function () {
+        if ($(window).width() !== lastWidth) {
+            checkFooter();
+            lastWidth = $(window).width();
+        }
+    })
+
 </script>
 
 {#<script>#}

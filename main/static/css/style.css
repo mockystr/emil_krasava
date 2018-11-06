@@ -210,8 +210,10 @@ a.active {
 }
 
 .image_of_slider img {
-    height: 600px;
+    max-height: 600px;
+    height: auto;
     width: 100%;
+    overflow: hidden;
 }
 
 .item_name {
