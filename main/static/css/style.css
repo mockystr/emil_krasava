@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(23,71,158, 0.5)) no-repeat;
 }
 
 header, .navbar {

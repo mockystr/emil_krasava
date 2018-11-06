@@ -54,11 +54,11 @@ class AboutUsView(TemplateResponseMixin, View):
         return self.render_to_response({})
 
 
-class ContactsView(TemplateResponseMixin, View):
-    template_name = 'main/company_info/contacts.html'
-
-    def get(self, request):
-        return self.render_to_response({})
+# class ContactsView(TemplateResponseMixin, View):
+#     template_name = 'main/company_info/contacts.html'
+#
+#     def get(self, request):
+#         return self.render_to_response({})
 
 
 class CatalogListView(TemplateResponseMixin, View):
