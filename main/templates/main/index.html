@@ -13,16 +13,35 @@
                 Здесь должен быть призыв к совершению звонка, или к тому,
                 чтобы клиент оставил свои данные.
             </p>
-            <p>
-                <a href="#" class="btn btn-outline-primary callback_btn my-2">Перезвоните мне!</a>
-            </p>
+
         </div>
     </div>
     <div class="house_bg">
         <div class="container">
             <div class="row">
-                <div class="col-lg-2 elements_of_house">
+                <div class="home">
+                    <img src="/static/image/home.jpg" alt="" style="width: 100%">
+                </div>
+
+                <div class="col-2 elements_of_house">
                     <div class="container">
+                        <div class="element_of_house" id="Apron_" onclick="window.location = '/fartuki-skinali'"><img
+                                src="{% static "svg\apron.svg" %}" alt="icon"
+                                class="icon"> Фартуки (Скинали)
+                        </div>
+                        <div class="element_of_house" id="Partition_" onclick="window.location = '/peregorodki'"><img
+                                src="{% static "svg\wall.svg" %}" alt="icon"
+                                class="icon"> Перегородки
+                        </div>
+
+                        <div class="element_of_house" id="Shelf_" onclick="window.location = '/polki'"><img
+                                src="{% static "svg\shelv.svg" %}" alt="icon"
+                                class="icon"> Полки
+                        </div>
+                        <div class="element_of_house" id="Bath_" onclick="window.location = '/dushevye'"><img
+                                src="{% static "svg\shower.svg" %}" alt="icon"
+                                class="icon"> Душевые
+                        </div>
                         <div class="element_of_house door" id="Fence_" onclick="window.location = '/ograzhdeniya'"><img
                                 src="{% static "svg\fence.svg" %}"
                                 alt="icon" class="icon"> Ограждения
@@ -34,6 +53,27 @@
                         <div class="element_of_house" id="Facade_" onclick="window.location = '/oblicovki'"><img
                                 src="{% static "svg\facade.svg" %}" alt="icon"
                                 class="icon"> Облицовки
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-8 svghome">
+                    {% include "main/house.svg" %}
+                </div>
+                <div class="col-2 elements_of_house">
+                    <div class="container">
+                        <div class="element_of_house" id="Sliding_doors_"
+                             onclick="window.location = '/razdvizhnye-dveri'" style="line-height:1;"><img
+                                src="{% static "svg\reldoor.svg" %}" alt="icon" class="icon"> Раздвижные двери
+                        </div>
+                        <div class="element_of_house" id="Stairs_" onclick="window.location = '/lestnicy'"><img
+                                src="{% static "svg\stairs.svg" %}" alt="icon"
+                                class="icon"> Лестницы
+                        </div>
+
+                        <div class="element_of_house" id="Mirror_" onclick="window.location = '/zerkala'"><img
+                                src="{% static "svg\mirror.svg" %}" alt="icon"
+                                class="icon"> Зеркала
                         </div>
                         <div class="element_of_house" id="Walls_" onclick="window.location = '/peregorodki'"><img
                                 src="{% static "svg\window.svg" %}" alt="icon"
@@ -51,41 +91,7 @@
                                 src="{% static "svg\table.svg" %}" alt="icon"
                                 class="icon"> Покрывное стекло
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    {% include "main/house.svg" %}
-                </div>
-                <div class="col-lg-2 elements_of_house">
-                    <div class="container">
-                        <div class="element_of_house" id="Sliding_doors_"
-                             onclick="window.location = '/razdvizhnye-dveri'" style="line-height:1;"><img
-                                src="{% static "svg\reldoor.svg" %}" alt="icon" class="icon"> Раздвижные двери
-                        </div>
-                        <div class="element_of_house" id="Stairs_" onclick="window.location = '/lestnicy'"><img
-                                src="{% static "svg\stairs.svg" %}" alt="icon"
-                                class="icon"> Лестницы
-                        </div>
-                        <div class="element_of_house" id="Partition_" onclick="window.location = '/peregorodki'"><img
-                                src="{% static "svg\wall.svg" %}" alt="icon"
-                                class="icon"> Перегородки
-                        </div>
-                        <div class="element_of_house" id="Bath_" onclick="window.location = '/dushevye'"><img
-                                src="{% static "svg\shower.svg" %}" alt="icon"
-                                class="icon"> Душевые
-                        </div>
-                        <div class="element_of_house" id="Mirror_" onclick="window.location = '/zerkala'"><img
-                                src="{% static "svg\mirror.svg" %}" alt="icon"
-                                class="icon"> Зеркала
-                        </div>
-                        <div class="element_of_house" id="Shelf_" onclick="window.location = '/polki'"><img
-                                src="{% static "svg\shelv.svg" %}" alt="icon"
-                                class="icon"> Полки
-                        </div>
-                        <div class="element_of_house" id="Apron_" onclick="window.location = '/fartuki-skinali'"><img
-                                src="{% static "svg\apron.svg" %}" alt="icon"
-                                class="icon"> Фартуки (Скинали)
-                        </div>
+
                     </div>
                 </div>
             </div>

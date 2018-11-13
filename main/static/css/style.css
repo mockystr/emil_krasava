@@ -324,6 +324,14 @@ a.active {
     .footer_copyrights {
         text-align: center;
     }
+    #Bath_ {
+    position: absolute;
+    left: 90px;
+    top: 100px;
+}
+    #Walls_, #Stairs_, #Table_, #Door_, #Roof_, #Sliding_doors_, #Mirror_, #Fence_, #Floor_, #Facade_, #Apron_, #Partition_, #Shelf_ {
+        position: static;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -349,5 +357,188 @@ a.active {
         justify-content: space-around;
         text-align: left;
     }
+}
+@media (min-width: 0) {
+    .home {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    #Bath_,#Shelf_,#Stairs_,#Walls_,#Sliding_doors_,#Door_,#Roof_,#Partition_,#Apron_,#Floor_,#Facade_,#Fence_,#Mirror_,#Table_,.svghome,.elements_of_house{
+        display: none;
+    }
+}
+@media (min-width: 576px) {
+    .home {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    #Bath_,#Shelf_,#Stairs_,#Walls_,#Sliding_doors_,#Door_,#Roof_,#Partition_,#Apron_,#Floor_,#Facade_,#Fence_,#Mirror_,#Table_,.svghome,.elements_of_house{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .home {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    #Bath_,#Shelf_,#Stairs_,#Walls_,#Sliding_doors_,#Door_,#Roof_,#Partition_,#Apron_,#Floor_,#Facade_,#Fence_,#Mirror_,#Table_,.svghome,.elements_of_house{
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    #Bath_,#Shelf_,#Stairs_,#Walls_,#Sliding_doors_,#Door_,#Roof_,#Partition_,#Apron_,#Floor_,#Facade_,#Fence_,#Mirror_,#Table_,.svghome,.elements_of_house{
+        display: block;
+    }
+    .home {
+        display: none;
+    }
+    #Bath_ {
+    position: absolute;
+    left: 60px;
+    top: 85px;
+}
+#Shelf_ {
+    position: absolute;
+    left: 85px;
+    top: 130px;
+}
+#Partition_ {
+    position: absolute;
+    left: 30px;
+    top: 170px;
+}
+#Apron_{
+    position: absolute;
+    left: 70px;
+    top: 205px;
+}
+#Facade_ {
+    position: absolute;
+    left: 45px;
+    top: 270px;
+}
+#Floor_ {
+    position: absolute;
+    left: 90px;
+    top: 310px;
+}
+#Fence_ {
+    position: absolute;
+    left: 35px;
+    top: 350px;
+}
+#Mirror_{
+    position: absolute;
+    top: 70px;
+}
+#Sliding_doors_{
+    position: absolute;
+    top: 110px;
+}
+#Roof_ {
+    position: absolute;
+    top: 165px;
+}
+#Door_ {
+    position: absolute;
+    top: 220px;
+}
+#Table_ {
+    position: absolute;
+    top: 250px;
+}
+#Walls_ {
+    position: absolute;
+    top: 300px;
+}
+#Stairs_ {
+    position: absolute;
+    top: 340px;
+}
+
+}
+
+@media (min-width: 1200px) {
+    #Bath_,#Shelf_,#Stairs_,#Walls_,#Sliding_doors_,#Door_,#Roof_,#Partition_,#Apron_,#Floor_,#Facade_,#Fence_,#Mirror_,#Table_,.svghome,.elements_of_house{
+        display: block;
+    }
+    .home {
+        display: none;
+    }
+    #Bath_ {
+    position: absolute;
+    left: 90px;
+    top: 100px;
+}
+#Shelf_ {
+    position: absolute;
+    left: 115px;
+    top: 155px;
+}
+#Partition_ {
+    position: absolute;
+    left: 60px;
+    top: 205px;
+}
+#Apron_{
+    position: absolute;
+    left: 100px;
+    top: 255px;
+}
+#Facade_ {
+    position: absolute;
+    left: 75px;
+    top: 325px;
+}
+#Floor_ {
+    position: absolute;
+    left: 120px;
+    top: 375px;
+}
+#Fence_ {
+    position: absolute;
+    left: 65px;
+    top: 425px;
+}
+#Mirror_{
+    position: absolute;
+    left: 10px;
+    top: 90px;
+}
+#Sliding_doors_{
+    position: absolute;
+    left: 10px;
+    top: 160px;
+}
+#Roof_ {
+    position: absolute;
+    left: 10px;
+    top: 210px;
+}
+#Door_ {
+    position: absolute;
+    left: 10px;
+    top: 260px;
+}
+#Table_ {
+    position: absolute;
+    left: 10px;
+    top: 300px;
+}
+#Walls_ {
+    position: absolute;
+    left: 10px;
+    top: 360px;
+}
+#Stairs_ {
+    position: absolute;
+    left: 10px;
+    top: 410px;
+}
 }
 
