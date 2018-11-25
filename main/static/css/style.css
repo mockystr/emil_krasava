@@ -86,7 +86,7 @@ header {
 
 .house_bg {
     background: #f8f9fa;
-    box-shadow: 0 0 5px black;
+    /* box-shadow: 0 0 5px black;*/
 }
 
 /*.footer_bg {*/
